@@ -10,7 +10,11 @@ export default function Event() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex flex-1">
-        {slug ? <Video lessonSlug={slug} /> : <div className="flex-1" />}
+        {slug ? (
+          <Video lessonSlug={slug} />
+        ) : (
+          <div className="flex-1">Selecione um link ao lado</div>
+        )}
         <Sidebar />
       </main>
     </div>
